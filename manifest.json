@@ -1,0 +1,26 @@
+{
+  "manifest_version": 3,
+  "name": "Tab Source Viewer 1",
+  "version": "1.0",
+  "permissions": ["scripting", "activeTab","tabs"],
+  "host_permissions": [
+      "https://*/*",
+      "http://*/*"
+    ],
+  "action": {
+    "default_popup": "popup.html"
+  },
+  "commands": {
+    "my_shortcut": {
+      "suggested_key": {
+        "default": "Ctrl+B",
+        "mac": "Command+B"
+      },
+      "description": "Opens popup.html"
+    }
+  },
+  "background": {
+    "service_worker": "background.js"
+  }
+
+}
